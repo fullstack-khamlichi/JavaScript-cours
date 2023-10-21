@@ -1,0 +1,46 @@
+// handling string in legacy js
+
+const oldStrings = 'Youness'
+const oldString2 = "Youness \n Khamlichi"
+const a = 22
+
+console.log("Youness" + ' ' + a)
+console.log(oldString2)
+
+// handling string in ES2015 +
+const newString = `Youness ${a}
+    Khamlichi
+`
+console.log(newString)
+
+// Exercice
+const students = [
+    {
+        name: "youness", 
+        lname: "khamlichi",
+        note: 12
+    },
+    {
+        name: 'dris', 
+        lname: 'alaoui',
+        note: 0
+    },
+    {
+        name: 'kamal', 
+        lname: 'janati',
+        note: 100
+    },
+        
+];
+
+const listAll = (studentsList) => {
+    studentsList.forEach((  {name, lname, note}) => {
+        console.log(`Dear ${lname}, 
+        ${name} ${lname} has a note of ${note}.
+        Best regards
+        `);
+        
+    });
+};
+
+listAll(students)
