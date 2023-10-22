@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+    <script>
+        // DOM imperativity + Callback function
+        window.addEventListener("load", () => {
+            //instructions
+            console.log("loaded")
+        })
+
+        const btn = document.getElementById('btn').addEventListener('click', () => {
+            // Callback (logic)
+            console.log("Button clicked!");
+        });
+
+        //Tiemers
+        setTimeout(()=>{
+            console.log("Hello from timer");
+        }, 2000) // Callback après 2 seconds
+
+        //XHRs = XmlHttpRequest // AJAX = Async Javascript And XML
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = (e)=>{
+            if(xhr.readyState === 4 ){
+                xhr.status === 200 ? console.log(xhr.responseText) : console.log('error');
+            }
+        }
+        xhr.open('GET','https://api.github.com/users/octocat')
+        xhr.send()
+
+    </script>
+</body>
+</html>
