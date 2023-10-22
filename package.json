@@ -1,0 +1,5 @@
+{
+    "type": "module"
+}
+
+// on peut faire l'extension '.mjs' si le fichier package.json n'est pas défini
